@@ -1,0 +1,18 @@
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cert: <http://www.w3.org/ns/auth/cert#> .
+@prefix rdfs: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<> a foaf:PersonalProfileDocument ;
+   foaf:maker <#this> ;
+   foaf:primaryTopic <#this> .
+
+<#this> a foaf:Person ;
+   foaf:name "Tobias Wieprich";
+   cert:key [
+       a cert:RSAPublicKey;
+       rdfs:label "made on 23 November 2011 on my laptop";
+       cert:modulus "c9392b55f5fdf692129b409205b0004b4a350e8a6f0191739d698f552d92862442c7bf3100afcb697570c9233a4f1b48af981421491b7419e48d865dcd0c88528f21d43b83697591e0fe4107e5faf3bd65060894da363af3105f0d9becf0239bfe8fc6ffe0f97ef6b34e1702467c017a53fc2bceb0a5ecf19c8cc00141870685380779456ce148c7c6104f77aaf7298bad41d034c77ba9cf1ba2c3f60a19aa43ab19c917188a8a308d8f59b5062dad74e38e8599840fc3e6ee28b8e4fd8fc63e96eb10b62650a0f45d249476eb5cb776fdf858887c432f6bfb23c52340974f4750fcd39378e9b8a6a2fbcc0333d55481055722c4132b28407b92f4f5e18e451"^^xsd:hexBinary;
+       cert:exponent "65537"^^xsd:integer;
+      ] .
